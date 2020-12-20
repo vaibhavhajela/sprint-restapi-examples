@@ -1,15 +1,15 @@
-package upgradbatch4;
+package com.upgrad5;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Created by vaibhavhajela on 19/12/20.
+ * Created by vaibhavhajela on 20/12/20.
  */
 @SpringBootApplication
-public class OrderMicroService {
+public class SpringBootOrderMicroService {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderMicroService.class,args);
+        SpringApplication.run(SpringBootOrderMicroService.class, args);
     }
 }

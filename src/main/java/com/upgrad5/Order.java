@@ -1,11 +1,11 @@
-package upgradbatch4;
+package com.upgrad5;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * Created by vaibhavhajela on 19/12/20.
+ * Created by vaibhavhajela on 20/12/20.
  */
 @Entity
 public class Order {
@@ -13,21 +13,19 @@ public class Order {
     @Id
     @GeneratedValue
     private long id;
-    private String product;
-    private String customer;
+    private  String product;
     private double price;
-
-
-    public Order(long id, String product, String customer, double price) {
-        this.id = id;
-        this.product = product;
-        this.customer = customer;
-        this.price = price;
-    }
-
+    private String address;
 
     public Order(){
 
+    }
+
+    public Order(long id, String product, double price, String address) {
+        this.id = id;
+        this.product = product;
+        this.price = price;
+        this.address = address;
     }
 
     public long getId() {
@@ -46,14 +44,6 @@ public class Order {
         this.product = product;
     }
 
-    public String getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(String customer) {
-        this.customer = customer;
-    }
-
     public double getPrice() {
         return price;
     }
@@ -62,16 +52,24 @@ public class Order {
         this.price = price;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+
+
     @Override
     public String toString() {
         return "Order{" +
                 "id=" + id +
                 ", product='" + product + '\'' +
-                ", customer='" + customer + '\'' +
                 ", price=" + price +
+                ", address='" + address + '\'' +
                 '}';
     }
-
-
 
 }
