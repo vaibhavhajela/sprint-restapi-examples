@@ -1,6 +1,7 @@
 package upgradbatch4;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class OrderRestController {
     }
 
     @PostMapping("/createorder")
-    @ResponseBody
+    @ResponseStatus(HttpStatus.CREATED)
     Order createOrder(@RequestBody Order newOrder){
         return orderService.createOrder(newOrder);
     }
